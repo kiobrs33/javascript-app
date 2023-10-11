@@ -74,4 +74,120 @@ let frutas = [
 // MATH - OPERACIONES MATEMATICAS
 const raizCuadrada = Math.sqrt(81)
 
-console.log(raizCuadrada)
+const raizCubica = Math.cbrt(64)
+
+const numbers = [1, 14, -5, 34, 99, 105]
+const numberMax = Math.max(...numbers)
+
+const numberMin = Math.min(...numbers)
+
+const numberRandom = Math.random() * 10
+
+const numberRound = Math.round(5.45)
+
+// Devuelve la representación flotante de precisión simple de 32 bits
+const numberFround = Math.fround(1.05)
+
+const numberFloor = Math.floor(5.95)
+
+const numberTrunc = Math.trunc(5.76)
+
+// console.log(raizCuadrada)
+// console.log(raizCubica)
+// console.log(numberMax)
+// console.log(numberMin)
+// console.log(numberRandom)
+// console.log(numberRound)
+// console.log(numberFround)
+// console.log(numberFloor)
+// console.log(numberTrunc)
+
+// EJERCICIO
+// Suma
+// Resta
+// Potencia
+// Multiplicacion
+// Divison
+// Raiz Cuadrada
+// Raiz Cubica
+
+class Calculator {
+  constructor(firstNumber, secondNumber) {
+    this.firstNumber = firstNumber
+    this.secondNumber = secondNumber
+  }
+
+  suma() {
+    return this.firstNumber + this.secondNumber
+  }
+
+  resta() {
+    return this.firstNumber - this.secondNumber
+  }
+
+  multiplicacion() {
+    return this.firstNumber * this.secondNumber
+  }
+
+  division() {
+    return this.firstNumber / this.secondNumber
+  }
+
+  resto() {
+    return this.firstNumber % this.secondNumber
+  }
+
+  potencia(exponente) {
+    return this.firstNumber ** exponente
+  }
+
+  raizCuadrada() {
+    return Math.sqrt(this.firstNumber)
+  }
+
+  raizCubica() {
+    return Math.cbrt(this.firstNumber)
+  }
+}
+
+const resultCal = new Calculator(4, 5)
+
+console.log("Here Guy!")
+console.log(resultCal.suma())
+console.log(resultCal.resta())
+console.log(resultCal.division())
+console.log(resultCal.multiplicacion())
+console.log(resultCal.resto())
+console.log(resultCal.potencia(3))
+console.log(resultCal.raizCuadrada())
+console.log(resultCal.raizCubica())
+
+// MATERIAS O CURSOS COFLA
+
+const cursos = [
+  "Comunicacion",
+  "Fisica",
+  "Calculo",
+  "Razonamiento Logico",
+  "Literatura"
+]
+
+const profesores = ["Mario", "Jose", "Carla", "Camila", "Henry"]
+
+const alumnos = [
+  "Pepe",
+  "Lucia",
+  "Lidia",
+  "Marina",
+  "Yovana",
+  "Asly",
+  "Anthony",
+  "Kevin",
+  "Johan",
+  "Miguel"
+]
+
+const curso = (nombreCurso) => {
+const numberRandom = Math.random() * 10
+const indiceProfesor = Math.random() * 5
+}
