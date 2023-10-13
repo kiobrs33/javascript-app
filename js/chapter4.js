@@ -152,15 +152,15 @@ class Calculator {
 
 const resultCal = new Calculator(4, 5)
 
-console.log("Here Guy!")
-console.log(resultCal.suma())
-console.log(resultCal.resta())
-console.log(resultCal.division())
-console.log(resultCal.multiplicacion())
-console.log(resultCal.resto())
-console.log(resultCal.potencia(3))
-console.log(resultCal.raizCuadrada())
-console.log(resultCal.raizCubica())
+// console.log("Here Guy!")
+// console.log(resultCal.suma())
+// console.log(resultCal.resta())
+// console.log(resultCal.division())
+// console.log(resultCal.multiplicacion())
+// console.log(resultCal.resto())
+// console.log(resultCal.potencia(3))
+// console.log(resultCal.raizCuadrada())
+// console.log(resultCal.raizCubica())
 
 // MATERIAS O CURSOS COFLA
 
@@ -188,6 +188,65 @@ const alumnos = [
 ]
 
 const curso = (nombreCurso) => {
-const numberRandom = Math.random() * 10
-const indiceProfesor = Math.random() * 5
+  const numberRandom = Math.random() * (profesores.length - 1)
+  const indiceProfesor = Math.round(numberRandom)
+  const profesor = profesores[indiceProfesor]
+
+  let alumnosRandom = []
+  let cont = 1
+
+  while (cont <= 3) {
+    const numRandom = Math.random() * (alumnos.length - 1)
+    const indiceAlumno = Math.round(numRandom)
+    const alumno = alumnos[indiceAlumno]
+    const result = alumnosRandom.filter((item) => item == alumno)
+
+    if (result.length == 0) {
+      alumnosRandom.push(alumno)
+      cont++
+    }
+  }
+
+  console.log(
+    `Su curso es: ${nombreCurso}, su docente es: ${profesor} y los alumnos son ${alumnosRandom}`
+  )
 }
+
+const clasesAlumno = () => {
+  const numRandom = Math.random() * (cursos.length - 1)
+  const numClases = Math.round(numRandom)
+
+  const numberRandom = Math.random() * (profesores.length - 2) + 1
+  const indiceProfesor = Math.round(numberRandom)
+  const profesor = profesores[indiceProfesor]
+
+  console.log(`Profesor ${profesor} y el total de clases ${numClases}`)
+}
+
+// curso(cursos[2])
+// clasesAlumno()
+
+class Inscripcion {
+  inscribirse() {
+    const nombreMateria = prompt("¿En que materia deseas inscribirse?")
+    // const nombreMateria = "Matematica"
+
+    const min = 15
+    const max = 20
+    const numRadom = Math.round(Math.random() * (max - min) + min)
+
+    if (numRadom < 20) {
+      alert(
+        `Su inscripcion fue exitosa en la materia de ${nombreMateria} y ${numRadom} alumnos`
+      )
+    } else {
+      alert(
+        `Se acabaron los cupos para esta materia: ${nombreMateria} cupos: ${numRadom}`
+      )
+    }
+  }
+}
+
+const inscripcionMateria = new Inscripcion()
+
+inscripcionMateria.inscribirse("Matematica")
