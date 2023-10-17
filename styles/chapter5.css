@@ -1,0 +1,11 @@
+input:invalid{
+  background-color: #aaa;
+
+}
+input:valid {
+  background-color: ivory;
+  border: none;
+  outline: 2px solid deepskyblue;
+  border-radius: 5px;
+  accent-color: gold;
+}
