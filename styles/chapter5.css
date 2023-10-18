@@ -9,3 +9,9 @@ input:valid {
   border-radius: 5px;
   accent-color: gold;
 }
+
+.grande {
+  color: #009;
+  font-size: 25px;
+  font-family: sans-serif;
+}

@@ -112,8 +112,7 @@ welcomeH1.style.backgroundColor = "#090"
 const classlistH1 = document.querySelector(".classlistH1")
 
 // classlistH1.className = "alternativa"
-
-console.log(classlistH1)
+// console.log(classlistH1)
 
 classlistH1.classList.remove("classlistH1")
 classlistH1.classList.add("anotherClass")
@@ -121,7 +120,7 @@ classlistH1.classList.toggle("visible")
 classlistH1.classList.replace("classlistH1", "newClass")
 
 let boolenaResp = classlistH1.classList.contains("visible")
-console.log(boolenaResp)
+// console.log(boolenaResp)
 
 classlistH1.classList.add("foo", "bar", "baz")
 classlistH1.classList.remove("foo", "bar", "baz")
@@ -129,3 +128,60 @@ classlistH1.classList.remove("foo", "bar", "baz")
 const cls = ["red", "blue", "green"]
 classlistH1.classList.add(...cls)
 classlistH1.classList.remove(...cls)
+
+// OBTENER TEXTO DE UNA ETIQUETA HTML
+const tituloModificar = document.querySelector("#tituloModificar")
+
+const innerHTML = tituloModificar.innerHTML
+const innerText = tituloModificar.innerText
+const textContent = tituloModificar.textContent
+const outerHTML = tituloModificar.outerHTML
+
+// console.log(innerHTML)
+// console.log(innerText)
+// console.log(textContent)
+// console.log(outerHTML)
+
+// CREACION DE ELEMENTOS
+const newTitulo = document.createElement("h2")
+const newContent = document.createTextNode("Bienvenido Neymar Jr")
+
+// newTitulo.innerHTML = "<b style='color:red'>Bienvenido Mbappe</b>"
+// newTitulo.innerHTML = "Hi Guy!"
+newTitulo.appendChild(newContent)
+
+const divContainer = document.querySelector("#contenedorA")
+divContainer.appendChild(newTitulo)
+
+// console.log(newTitulo)
+
+// CREATE DOCUMENT FRAGMENT
+const fragment = new DocumentFragment()
+const listaA = document.querySelector("#listaA")
+
+const apellidos = ["Lozano", "Ramos", "Diaz", "Flores", "Zambrano", "Pirlo"]
+
+apellidos.forEach((apellido) => {
+  const li = document.createElement("li")
+  li.classList.add("grande")
+  li.textContent = apellido
+  fragment.appendChild(li)
+})
+
+listaA.appendChild(fragment)
+
+// OBTENCION DE CHILDS
+const containerB = document.querySelector(".contenedorB")
+console.log(containerB.firstChild)
+console.log(containerB.lastChild)
+console.log(containerB.firstElementChild)
+console.log(containerB.lastElementChild)
+console.log(containerB.childNodes)
+
+const elements = containerB.children
+
+for (const elem of elements) {
+  console.log(elem)
+}
+
+console.log(containerB.children)
