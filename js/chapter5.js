@@ -172,16 +172,62 @@ listaA.appendChild(fragment)
 
 // OBTENCION DE CHILDS
 const containerB = document.querySelector(".contenedorB")
-console.log(containerB.firstChild)
-console.log(containerB.lastChild)
-console.log(containerB.firstElementChild)
-console.log(containerB.lastElementChild)
-console.log(containerB.childNodes)
+// console.log(containerB.firstChild)
+// console.log(containerB.lastChild)
+// console.log(containerB.firstElementChild)
+// console.log(containerB.lastElementChild)
+// console.log(containerB.childNodes)
 
 const elements = containerB.children
 
-for (const elem of elements) {
-  console.log(elem)
-}
+// for (const elem of elements) {
+//   console.log(elem)
+// }
 
-console.log(containerB.children)
+// console.log(containerB.children)
+
+// METODO DE CHILDS
+const jblTitle = document.querySelector(".jblTitle")
+const contenedorC = jblTitle.parentElement
+
+contenedorC.style.backgroundColor = "#900"
+
+const newJblTitle = document.createElement("h1")
+newJblTitle.innerHTML = "Nuevo JBL 2.0 PARA PERU"
+
+// contenedorC.replaceChild(newJblTitle, jblTitle)
+contenedorC.removeChild(jblTitle)
+const hasChilds = contenedorC.hasChildNodes()
+// console.log(contenedorC.childNodes)
+// console.log(hasChilds)
+
+// PARENT ELEMENTS
+const spanA = document.querySelector("#spanPeru")
+const contenedorSpanA = spanA.parentElement
+const contenedorSpanB = spanA.parentNode
+
+// console.log(contenedorSpanA)
+// console.log(contenedorSpanB)
+
+// PROPERTY SIBLINGS (HERMANOS)
+const eminenTitle = document.querySelector("#eminenTitle")
+
+// console.log(eminenTitle.nextSibling)
+// console.log(eminenTitle.previousSibling)
+// console.log(eminenTitle.nextElementSibling)
+// console.log(eminenTitle.previousElementSibling)
+
+// CLOSEST
+const el = document.getElementById("div-03")
+
+// El ancestro más cercano con el id de "div-02"
+console.log(el.closest("#div-02")) // <div id="div-02">
+
+//  El ancestro más cercano que es un div dentro de un div
+console.log(el.closest("div div")) // <div id="div-03">
+
+// El ancestro más cercano que es un div y tiene un padre article
+console.log(el.closest("article > div")) // <div id="div-01">
+
+// El ancestro más cercano que no sea un div
+console.log(el.closest(":not(div)"))
