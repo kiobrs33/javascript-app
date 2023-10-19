@@ -231,3 +231,7 @@ console.log(el.closest("article > div")) // <div id="div-01">
 
 // El ancestro más cercano que no sea un div
 console.log(el.closest(":not(div)"))
+
+
+
+
