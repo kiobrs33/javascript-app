@@ -66,7 +66,6 @@
 // // scroll(X,Y)
 // scroll(0, 10000)
 
-
 // // MODIFICAR EL TAMAÑO DE LA VENTANA
 // ventanaA = window.open("https://youtube.com")
 
@@ -77,14 +76,79 @@
 // ventanaA.resizeTo(200,200)
 
 // Object LOCATION
-console.log(location)
-console.log(location.href)
-console.log(location.protocol)
-console.log(location.host)
-console.log(location.hostname)
-console.log(location.port)
-console.log(location.pathname)
-
+// console.log(location)
+// console.log(location.href)
+// console.log(location.protocol)
+// console.log(location.host)
+// console.log(location.hostname)
+// console.log(location.port)
+// console.log(location.pathname)
 
 // Te manda a la pagina ESPECIFICADA
-location.assign("https://youtube.com")
+// location.assign("https://youtube.com")
+
+// Requeriemientos
+// #1
+// La pantalla debe ser almenos FULL HD
+// Preguntarle  si esta seguro de comprar la pantalla
+
+// #2
+// Esta en modo pantalla completa "F11"
+// Mostrar la URL
+// Protocolo
+// Mostrar datos del SITIO WEB
+
+// const screenHeight = window.screen.availHeight
+// const screenWidth = window.screen.availWidth
+
+// const label1 = document.createElement("h2")
+// const label2 = document.createElement("h2")
+
+// const heightLabel = document.createTextNode(
+//   `El alto de la pantalla es de: ${screenHeight}`
+// )
+// const widthLabel = document.createTextNode(
+//   `El ancho de la pantalla es de: ${screenWidth}`
+// )
+
+// label1.appendChild(heightLabel)
+// label2.appendChild(widthLabel)
+
+// const containerA = document.querySelector("#container")
+
+// containerA.appendChild(label1)
+// containerA.appendChild(label2)
+
+// console.log(screenHeight, screenWidth)
+
+// const buttonBuy = document.querySelector("#buttonBuy")
+// buttonBuy.addEventListener("click", () => {
+//   const resp = confirm(
+//     `¿Quieres comprar este monitor de ${screenHeight}x${screenWidth}?`
+//   )
+
+//   if (resp) {
+//     alert("Producto comprado")
+//   } else {
+//     alert("Transaccion cancelada")
+//   }
+// })
+
+// Ejercicio #2
+const labelUrl = document.querySelector("#urlSite")
+const labelProtocol = document.querySelector("#protocoloSite")
+const labelHostName = document.querySelector("#nostnameSite")
+
+console.log("location")
+console.log(location)
+
+const textLabelUrl = document.createTextNode(location.href)
+labelUrl.appendChild(textLabelUrl)
+
+const textLabelProtocol = document.createTextNode(location.protocol)
+labelProtocol.appendChild(textLabelProtocol)
+
+const textLabelHostName = document.createTextNode(location.hostname)
+labelHostName.appendChild(textLabelHostName)
+
+
