@@ -1,0 +1,29 @@
+.containerA {
+  background: #00f;
+  padding: 20px;
+}
+
+.containerB {
+  background: #f00;
+  padding: 20px;
+}
+
+.titleA {
+  color: #fff;
+}
+
+.containerC {
+  background: #0a0;
+  padding: 20px;
+}
+
+.containerD {
+  background: #050;
+  padding: 20px;
+}
+
+.input-example {
+  padding: 10px;
+  outline: none;
+  border-radius: 5px;
+}
