@@ -3,6 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="../css/chapter7Practice.css" />
     <title>Document</title>
   </head>
   <body>
@@ -13,12 +14,12 @@
       <div>
         <label for="">Nombre</label>
         <input type="text" placeholder="Nombre" name="nombre" id="nombre" />
-        <span id="validarNombre"></span>
+        <span id="validarNombre" class="sms-validate"></span>
       </div>
       <div>
         <label for="">Email</label>
         <input type="email" placeholder="Correo" name="correo" id="correo" />
-        <span id="validarCorreo"></span>
+        <span id="validarCorreo" class="sms-validate"></span>
       </div>
       <div>
         <label for="">Metaria Adeudada</label>
@@ -28,10 +29,13 @@
           name="nombreMateria"
           id="nombreMateria"
         />
-        <span id="validarNombreMateria"></span>
+        <span id="validarNombreMateria" class="sms-validate"></span>
       </div>
       <div>
         <button type="submit" class="button-submit">Enviar Datos</button>
+      </div>
+      <div>
+        <span class="validarFormulario"></span>
       </div>
     </form>
 

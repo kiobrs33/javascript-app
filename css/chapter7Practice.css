@@ -1,0 +1,14 @@
+.sms-validate {
+  display: block;
+}
+
+.successful {
+  color: #0c0;
+  font-weight: bold;
+  display: block;
+}
+
+.error {
+  color: #d00;
+  font-weight: bold;
+}
